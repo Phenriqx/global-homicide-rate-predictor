@@ -2,10 +2,10 @@ raw_data_dir: data/raw
 processed_data_path: data/processed/final-homicide-dataset.csv
 
 datasets:
-  - economic-inequality-gini-index.csv
-  - gdp-per-capita-maddison-project-database.csv
-  - homicide-rate-unodc.csv
-  - human-development-index.csv
-  - political-corruption-index.csv
-  - rule-of-law-index.csv
-  - share-of-population-urban.csv
+  - data/raw/economic-inequality-gini-index.csv
+  - data/raw/gdp-per-capita-maddison-project-database.csv
+  - data/raw/homicide-rate-unodc.csv
+  - data/raw/human-development-index.csv
+  - data/raw/political-corruption-index.csv
+  - data/raw/rule-of-law-index.csv
+  - data/raw/share-of-population-urban.csv

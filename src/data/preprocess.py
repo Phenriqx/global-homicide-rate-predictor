@@ -6,6 +6,7 @@ def to_lower_column(df: pd.DataFrame) -> pd.DataFrame:
 
 def drop_unused_columns(df: pd.DataFrame) -> pd.DataFrame:
     df = df.drop('gdp-per-capita-(annotations)', axis=1)
+    return df
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     df = df.rename(columns={
@@ -13,8 +14,10 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
         'World region according to OWID': 'world-region',
         'Homicide rate per 100,000 population': 'homicide-rate-100000',
         'urban-population-(%-of-total-population)': 'urbanization',
-    }, axis=1)
+    })
 
     df = to_lower_column(df)
     df.columns = df.columns.str.replace(' ', '-')
     df = drop_unused_columns(df)
+
+    return df

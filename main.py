@@ -1,6 +1,6 @@
 from src.data.load import load_data, merge_datasets
 from src.data.preprocess import preprocess
-from src.config import load_config
+from src.config.load_config import load_config
 from pathlib import Path
 
 data_config = load_config('configs/data.yaml')
