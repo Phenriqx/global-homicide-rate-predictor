@@ -3,6 +3,8 @@ from src.data.preprocess import preprocess
 from src.config.load_config import load_config
 from src.data.splitting import build_features
 from src.models.train import train_or_load_model
+from src.models.evaluate import evaluate_model
+
 from pathlib import Path
 
 data_config = load_config('configs/data.yaml')
@@ -19,7 +21,12 @@ def main():
     cat_features = ['entity', 'world-region']
 
     model_pipeline = train_or_load_model(X, y, num_features, cat_features)
+    mae, rmse, r2 = evaluate_model(model_pipeline, X, y)
 
+    print("Evaluating Model...")
+    print(f"MAE: {mae}")
+    print(f"RMSE: {rmse}")
+    print(f"R2: {r2}")
 
 def build_dataset():
     if PROCESSED_FILE.exists():

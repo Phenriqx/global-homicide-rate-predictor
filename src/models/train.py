@@ -1,6 +1,8 @@
 import joblib
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.compose import TransformedTargetRegressor
+from sklearn.preprocessing import PowerTransformer
 
 from src.models.pipeline import build_preprocessor
 from src.data.splitting import split_data
@@ -22,10 +24,10 @@ def train_or_load_model(X, y, num_features, cat_features):
 
     model_pipeline = Pipeline([
         ('preprocessor' ,preprocessor),
-        ('model', RandomForestRegressor(
+        ('model', TransformedTargetRegressor(regressor=RandomForestRegressor(
             n_estimators=RF_HYPERPARAMETERS['n_estimators'],
             max_features=RF_HYPERPARAMETERS['max_features']
-        ))
+        ), transformer=PowerTransformer(method='yeo-johnson')))
     ])
 
     splits = split_data(X, y)
