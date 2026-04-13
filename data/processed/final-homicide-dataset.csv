@@ -1,4 +1,4 @@
-entity,code,year,gini-coefficient,world-region,gdp-per-capita,homicide-rate-100000,hdi,political-corruption-index,rule-of-law-index,urban-population-(%-of-total-population)
+entity,code,year,gini-coefficient,world-region,gdp-per-capita,homicide-rate-100000,hdi,political-corruption-index,rule-of-law-index,urbanization
 Albania,ALB,1996,0.2701034247875213,Europe,3965.6853,8.380375,0.647,0.682,0.496,38.899605
 Albania,ALB,2002,0.3173897862434387,Europe,5608.9624,6.891948,0.697,0.744,0.515,43.152042
 Albania,ALB,2005,0.3059565424919128,Europe,6858.4673,5.006243,0.723,0.722,0.542,45.993767

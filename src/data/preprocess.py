@@ -13,7 +13,7 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
         'Human Development Index': 'hdi',
         'World region according to OWID': 'world-region',
         'Homicide rate per 100,000 population': 'homicide-rate-100000',
-        'urban-population-(%-of-total-population)': 'urbanization',
+        "Urban population (% of total population)": 'urbanization',
     })
 
     df = to_lower_column(df)
